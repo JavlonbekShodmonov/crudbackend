@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Blog</h1>
+
+    <div id="posts"></div>
+
+    <h2>Add New Post</h2>
+    <form id="postForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="content" placeholder="Content" required></textarea>
+        <button type="submit">Add Post</button>
+    </form>
+
+    <h2>Update Post</h2>
+    <form id="updateForm">
+        <input type="number" id="updateId" placeholder="Post ID to Update" required>
+        <input type="text" id="updateTitle" placeholder="New Title" required>
+        <textarea id="updateContent" placeholder="New Content" required></textarea>
+        <button type="submit">Update Post</button>
+    </form>
+
+    <h2>Delete Post</h2>
+    <form id="deleteForm">
+        <input type="number" id="deleteId" placeholder="Post ID to Delete" required>
+        <button type="submit">Delete Post</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

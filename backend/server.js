@@ -1,13 +1,20 @@
 const express = require('express');
 require('dotenv').config(); // Load .env variables
+// Import the CORS package
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
-
 // Middleware to parse JSON
 app.use(express.json());
-
 // Serve static files (HTML, CSS, JS) from the 'public' folder
 app.use(express.static('public'));
+// Enable CORS for all origins (you can customize this later)
+app.use(cors());
+
+// Alternatively, to allow only specific origins, pass an object to cors():
+// app.use(cors({
+//   origin: 'https://your-frontend-url.netlify.app'  // Replace with your frontend's URL
+// }));
 
 // In-memory store (you can later replace this with a database)
 let posts = [
